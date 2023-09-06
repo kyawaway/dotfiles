@@ -1,0 +1,40 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'kannokanno/previm'
+hook_add = '''
+  let g:previm_open_cmd = 'open -a Google\ Chrome'
+  let g:previm_wsl_mode = 1
+  '''
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'qnighy/satysfi.vim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'arcticicestudio/nord-vim'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'kyawaway/lmntal.vim'
+
+[[plugins]]
+repo = 'vim-scripts/promela.vim'
