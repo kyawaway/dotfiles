@@ -4,6 +4,7 @@
   "copilot.vim": { "branch": "release", "commit": "719dd8d0beab993dbad47a9e86ecb0dbd4a99da5" },
   "editorconfig-vim": { "branch": "master", "commit": "aefcf3d735122f349b172302d164d5eb61cd7e5f" },
   "lazy.nvim": { "branch": "main", "commit": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01" },
+  "lmntal.vim": { "branch": "main", "commit": "949231913f9475edcfbb8b98737807376906f0e4" },
   "lualine.nvim": { "branch": "master", "commit": "45e27ca739c7be6c49e5496d14fcf45a303c3a63" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "dfdd771b792fbb4bad8e057d72558255695aa1a7" },
   "mason.nvim": { "branch": "main", "commit": "ee6a7f179ebf8aa9da9d53b1cf1b57d292ea0182" },

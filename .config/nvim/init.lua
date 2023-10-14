@@ -17,7 +17,8 @@ vim.o.showmatch = true
 vim.o.matchtime = 1
 
 -- colorscheme
-vim.cmd [[colorscheme solarized]]
+--vim.cmd [[colorscheme solarized]]
+vim.cmd [[colorscheme iceberg]]
 
 -- search
 vim.o.incsearch = true
@@ -31,6 +32,8 @@ vim.g.mapleader = ' '
 vim.opt.clipboard:append { 'unnamedplus' }
 vim.o.ttimeout = true
 vim.o.ttimeoutlen = 50
+
+vim.o.mouse = 'a'
 
 vim.o.undofile = true
 vim.o.undodir = vim.fn.stdpath('cache') .. '/undo'
@@ -57,7 +60,7 @@ vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+--vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
