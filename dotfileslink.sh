@@ -4,3 +4,4 @@ ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.config ~/.config
 ln -sf ~/dotfiles/.tmux ~/.tmux
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/.hyper.js ~/.hyper.js
