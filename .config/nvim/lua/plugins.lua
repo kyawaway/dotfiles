@@ -14,6 +14,9 @@ return {
     end
   },
   {
+    "github/copilot.vim",
+  },
+  {
     'numToStr/Comment.nvim',
     config = function()
       require('config/comment')
@@ -29,15 +32,15 @@ return {
     end
   },
   {
+    'tamarin-prover/editors',
+  },
+  {
     'kyawaway/lmntal.vim',
   },
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
 -- or                              , branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-  {
-    "github/copilot.vim",
   },
   {
     "lervag/vimtex",
@@ -63,10 +66,45 @@ return {
     "neovim/nvim-lspconfig",
   },
   {
+    "sankantsu/satysfi.nvim",
+  },
+  {
+    "ToruNiina/satysfi.vim",
+  },
+  {
     "williamboman/mason-lspconfig.nvim",
 --    config = function()
 --      require('config/mason-lsp')
 --    end
+  },
+  {
+    'nvim-orgmode/orgmode',
+    event = 'VeryLazy',
+    ft = { 'org' },
+    config = function()
+      require('orgmode').setup({
+        org_agenda_files = '~/orgfiles/**/*',
+        org_default_notes_file = '~/orgfiles/refile.org',
+      })
+    end,
+  },
+  {
+    -- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
+    "jay-babu/mason-nvim-dap.nvim",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "mfussenegger/nvim-dap",
+    },
+    config = function()
+      require("mason").setup()
+      require("mason-nvim-dap").setup({
+        handlers = {
+            function(config)
+              require('mason-nvim-dap').default_setup(config)
+            end,
+        },
+      })
+    end,
   },
   {
     "hrsh7th/nvim-cmp",
