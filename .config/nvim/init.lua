@@ -1,5 +1,5 @@
 -- encoding
-vim.o.encofing = 'utf-8'
+--vim.o.encofing = 'utf-8'
 vim.scriptencoding = 'utf-8'
 
 -- visual
@@ -50,7 +50,7 @@ vim.api.nvim_set_keymap('n', ';', ':', { noremap = true })
 
 require('lazy_nvim')
 
-polish = function()
+Polish = function()
   vim.g.copilot_no_tab_map = true
   vim.api.nvim_set_keymap("i", "<C-i>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 end
