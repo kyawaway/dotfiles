@@ -90,15 +90,20 @@ return {
     {
       key = 'h',
       mods = 'LEADER',
-      action = wezterm.action.ActivateTabRelative(-1)
+      action = wezterm.action.ActivatePaneDirection "Left",
     },
     {
       key = 'l',
       mods = 'LEADER',
-      action = wezterm.action.ActivateTabRelative(1)
+      action = wezterm.action.ActivatePaneDirection "Right",
     },
     {
-      key = 'DownArrow',
+      key = 'LeftArrow',
+      mods = 'LEADER',
+      action = wezterm.action.PaneSelect
+    },
+    {
+      key = 'RightArrow',
       mods = 'LEADER',
       action = wezterm.action.PaneSelect
     },
