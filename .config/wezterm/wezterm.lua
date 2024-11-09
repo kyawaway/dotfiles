@@ -2,7 +2,9 @@ local wezterm = require 'wezterm';
 return {
   -- font
   font = wezterm.font_with_fallback({
-    {family="MesloLGS NF", weight="Regular"},
+    "MesloLGS NF",
+    "Firge35Nerd Console",
+    "Apple Color Emoji",
   }),
   font_size = 20.0,
   -- color scheme
@@ -56,5 +58,65 @@ return {
     }
   },
   -- shell
-  default_prog = {"zsh", "--login"}
-}
+  default_prog = {"zsh", "--login"},
+
+  -- key bindings
+  leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 },
+  keys = {
+    {
+      key = '%',
+      mods = 'LEADER|SHIFT',
+      action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+    },
+    {
+      key = '"',
+      mods = 'LEADER|SHIFT',
+      action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+    },
+    {
+      key = 'c',
+      mods = 'LEADER',
+      action = wezterm.action({SpawnTab = "CurrentPaneDomain"}),
+    },
+    {
+      key = 'h',
+      mods = 'LEADER',
+      action = wezterm.action.ActivateTabRelative(-1)
+    },
+    { key = '{', mods = 'ALT', action = wezterm.action.ActivateTabRelative(-1) },
+    {
+      key = 'l',
+      mods = 'LEADER',
+      action = wezterm.action.ActivateTabRelative(1)
+    },
+    {
+      key = 'DownArrow',
+      mods = 'LEADER',
+      action = wezterm.action.PaneSelect
+    },
+    {
+      key = "LeftArrow",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.SendKey {
+        key = "b",
+        mods = "META",
+      },
+    },
+    {
+      key = "RightArrow",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.SendKey {
+        key = "f",
+        mods = "META",
+      },
+    },
+    {
+      key = "Backspace",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.SendKey {
+        key = "w",
+        mods = "CTRL",
+      },
+    },
+  },
+ }
