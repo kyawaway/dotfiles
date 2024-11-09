@@ -69,6 +69,15 @@ return {
       action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
     },
     {
+      key = '}',
+      mods = 'LEADER|SHIFT',
+      action = wezterm.action.SplitPane {
+        direction = 'Right',
+        --command = { args = { 'top' } },
+        size = { Percent = 45 },
+      },
+    },
+    {
       key = '"',
       mods = 'LEADER|SHIFT',
       action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
@@ -83,7 +92,6 @@ return {
       mods = 'LEADER',
       action = wezterm.action.ActivateTabRelative(-1)
     },
-    { key = '{', mods = 'ALT', action = wezterm.action.ActivateTabRelative(-1) },
     {
       key = 'l',
       mods = 'LEADER',
